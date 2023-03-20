@@ -21,6 +21,14 @@ const AbsenModel = db.define('absens', {
         }
     },
     
+    kerja: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate:{
+            notEmpty: true,
+            
+        }
+    },
     hadir: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -29,7 +37,15 @@ const AbsenModel = db.define('absens', {
             
         }
     },
-    
+    alpha: {
+        defaultValue: 0,
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate:{
+            notEmpty: true,
+            
+        }
+    },
     izin: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -46,7 +62,7 @@ const AbsenModel = db.define('absens', {
             
         }
     },
-   
+    
     sakit: {
         defaultValue: 0,
         type: DataTypes.INTEGER,
@@ -65,15 +81,7 @@ const AbsenModel = db.define('absens', {
             
         }
     },
-    alpha: {
-        defaultValue: 0,
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate:{
-            notEmpty: true,
-            
-        }
-    },
+   
     cuti: {
         defaultValue: 0,
         type: DataTypes.INTEGER,
@@ -83,6 +91,52 @@ const AbsenModel = db.define('absens', {
             
         }
     },
+    resign: {
+        defaultValue: 0,
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate:{
+            notEmpty: true,
+            
+        }
+    },
+    libur: {
+        defaultValue: 0,
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate:{
+            notEmpty: true,
+            
+        }
+    },
+    setengah: {
+        defaultValue: 0,
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate:{
+            notEmpty: true,
+            
+        }
+    },
+    off: {
+        defaultValue: 0,
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate:{
+            notEmpty: true,
+            
+        }
+    },
+    isoman: {
+        defaultValue: 0,
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate:{
+            notEmpty: true,
+            
+        }
+    },
+    
    
 }, {
     freezeTableName: true
